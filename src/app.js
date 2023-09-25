@@ -1,10 +1,9 @@
 import express from "express";
+import morgan from "morgan";
 
 /* Server */
 const app = express();
 
-/* Routes */
-app.listen(3000, () => {
-    console.log("Server running on port 3000");
-    }
-);
+app.use(morgan("dev"));
+
+export default app;
