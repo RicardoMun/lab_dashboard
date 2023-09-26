@@ -21,6 +21,8 @@ const UserSchema = new mongoose.Schema({
         default: 'user'
     },
 
+}, {
+    timestamps: true /* Crea dos campos: createdAt y updatedAt */
 })
 
 export default mongoose.model('User', UserSchema);
