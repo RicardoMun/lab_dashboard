@@ -13,8 +13,12 @@ export const register = async (req, res) => {
             rol
         })
 
-        await newUser.save()
-        res.send("registrando")
+        /* console.log(newUser); */
+        const userSaved = await newUser.save()
+        /* Envio al frontEnd */
+        res.json(userSaved)
+        /* res.send("registrando") */
+
     } catch (error) {
         console.log(error)
     }
