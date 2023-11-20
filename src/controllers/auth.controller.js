@@ -9,6 +9,15 @@ export const register = async (req, res) => {
 
     try{
 
+        const userFound = await User.findOne({email})
+        if(userFound){
+            return res.status(400).json(["Este correo ya existe"])
+        }
+
+        if(password.length < 7){
+            return res.status(400).json(["La contraseña debe tener al menos 8 caracteres"])
+        }
+
         /* Encriptación de la contraseñá */
         const passwordHashs = await bcrypt.hash(password, 10)
 
