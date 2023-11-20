@@ -40,6 +40,23 @@
 
 }
 
+.error{
+    color: rgb(235, 58, 58);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.alertMessage{
+    background-color: rgb(235, 58, 58);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .terms {
     cursor: pointer;
     color: blue;
