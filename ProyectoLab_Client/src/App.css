@@ -1,27 +1,13 @@
 @font-face {
-  font-family: Roboto_Condensed;
-  src: url(../public/RobotoCondensed-VariableFont_wght.ttf);
+  font-family: Raleway;
+  src: url(../public/fonts/Raleway/Raleway-VariableFont_wght.ttf);
 }
 
-*{
-  background-color: white;
-  font-family: Roboto_Condensed;
-  color: black;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-
-}
-
-.container{
+.App{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 120px 0;
-}
-
-.main{
+  justify-content: center;
+  font-family: Raleway;
+  background-color: white;
 }
