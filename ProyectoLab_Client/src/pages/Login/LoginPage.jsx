@@ -1,28 +1,39 @@
 import "./style.css"
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
+import Navbar from '../../components/Navbar/Navbar';
+
 
 function LoginPage() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { signin, errors: signinErrors } = useAuth();
+    const { signin, errors: signinErrors, isAuthenticated } = useAuth();
+    const navigate = useNavigate ();
 
+    const onSubmit = (data) => signin(data);
 
-    const onSubmit = handleSubmit((data) => {
-        signin(data);
-    })
-
+    useEffect(() => {
+        if (isAuthenticated) {
+          navigate("/tasks");
+        }
+      }, [isAuthenticated]);
 
     return (
+        
         <div className="container">
-
+            <Navbar />
             <div className="form">
                 {
+                    /* Si se cambia por error.message se soluciona error que aparece 
+                    al ingresar una contraseña más larga de 8 caracteres pero no se despliegan
+                    los errores eb el form */
                     signinErrors.map((error, i) => {
                         return (
                             <div key={i} className="alertMessage">
-                                {error}
+                                {error} 
                             </div>
                         )
 
@@ -30,7 +41,7 @@ function LoginPage() {
                 }
                 <h1 className="title">Inicio de sesión</h1>
                 <form
-                    onSubmit={onSubmit}
+                    onSubmit={handleSubmit(onSubmit)}
                 >
 
                     <label className="form-label">Correo</label>

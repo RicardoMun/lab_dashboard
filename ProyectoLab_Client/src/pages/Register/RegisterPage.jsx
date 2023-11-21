@@ -5,7 +5,7 @@ import TermsAndConds from "../../components/TermsAndConditions/TermsAndConds";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
-
+import Navbar from "../../components/Navbar/Navbar";
 
 
 
@@ -35,7 +35,7 @@ function RegisterPage() {
     return (
 
         <div className="container">
-
+            <Navbar />
             <div className="form">
                 {
                     RegisterErrors.map((error, i) => {

@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    margin: 10%;
 }
 
 .form {
@@ -69,7 +70,7 @@
     text-decoration: none;
     text-align: center;
     margin-top: 10px;
-    color: blue;
+    color: rgb(23, 24, 61);
 }
 
 .sendButton {
