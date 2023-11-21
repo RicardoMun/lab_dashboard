@@ -4,6 +4,11 @@ import { useForm } from "react-hook-form";
 import TermsAndConds from "../../components/TermsAndConditions/TermsAndConds";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
+
+
+
 function RegisterPage() {
 
     const {
@@ -57,7 +62,7 @@ function RegisterPage() {
 
                     <label className="form-label">Correo</label>
                     <input
-                        type="text" {...register("email", { required: true })}
+                        type="email" {...register("email", { required: true })}
                         className="form-control"
                     />
                     {errors.email && (
@@ -98,6 +103,16 @@ function RegisterPage() {
 
 
                 </form>
+                
+                <p className="redirectLink">
+                    Ya tienes una cuenta? {" "}
+                    <Link 
+                        to="/login"
+                        className="link"
+                    >Iniciar sesión</Link>
+                </p>
+
+
             </div>
 
         </div>

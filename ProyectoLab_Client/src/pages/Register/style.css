@@ -57,10 +57,20 @@
     text-align: center;
 }
 
+.redirectLink{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.link{
+    text-align: center;
+    margin-top: 10px;
+}
+
 .terms {
     cursor: pointer;
     color: blue;
-    text-decoration: underline;
 }
 
 .modal {
