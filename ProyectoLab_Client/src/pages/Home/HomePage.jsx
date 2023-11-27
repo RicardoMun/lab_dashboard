@@ -1,66 +1,68 @@
 import "../Home/style.css"
 
 import Navbar from '../../components/Navbar/Navbar'
-
+import AboutUsText from "../../components/Text/AboutUs"
 
 function HomePage() {
   return (
     // a home page with info about the app
     <div className="container">
       <Navbar />
-      <div className="titleSection">
-        <h1 className="title">Cristina Vela Laboratorio Clínico Especializado</h1>
-      </div>
 
-      <section className="imgSection">
-        <div className="images">
-          <img src="img/chequeo.png" alt="orina" />
-          <img src="img/panelOrinas.png" alt="panelOrina" />
+      <section className="titleSection">
+        <div className="titleSection">
+          <h1 className="title">Cristina Vela Laboratorio Clínico Especializado</h1>
+          <AboutUsText />
         </div>
       </section>
 
-      <section id="about-us">
-        <h2 className="title">Sobre Nosotros</h2>
-        <p className="aboutUs">En <b>Cristina Vela Laboratorio Clínico Especializado</b>, nos dedicamos a brindar servicios de diagnóstico de vanguardia con un enfoque centrado en la precisión y la atención al paciente.
-          Con años de experiencia en el campo de la salud, nuestro equipo de profesionales altamente calificados trabaja incansablemente para ofrecer resultados de laboratorio confiables y oportunos.
-          Nos enorgullece ser un referente en la industria, destacándonos por la tecnología de última generación que utilizamos y nuestro compromiso inquebrantable con la excelencia en el servicio.
-          Estamos dedicados a proporcionar a médicos y pacientes la información crucial que necesitan para tomar decisiones informadas sobre la salud.
-          En cada análisis y prueba que realizamos, nos esforzamos por superar las expectativas, contribuyendo así al bienestar general de la comunidad a la que servimos.
-        </p>
+
+      <section className="imgSection">
+
+        <div className="images">
+          <img src="img/chequeo.png" alt="orina" />
+        </div>
+
+        <div className="images">
+          <img src="img/panelOrinas.png" alt="panelOrina" />
+        </div>
+
+        <div className="images">
+          <img src="img/chequeo.png" alt="panelOrina" />
+        </div>
+
+        <div className="images">
+          <img src="img/panelOrinas.png" alt="panelOrina" />
+        </div>
+
+        <div className="images">
+          <img src="img/chequeo.png" alt="panelOrina" />
+        </div>
+
       </section>
 
-      <section>
+      <section id="aboutUsSection">
+        <h2 className="title">Sobre Nosotros</h2>
+        <AboutUsText />
+      </section>
+
+      <section id="cardSection">
+        
         <div className="profileCard">
           <div className="profile">
+            
             <img src="img/avatars/avatar1.png" alt="fotoPerfil" />
             <div className="profileInfo">
               <h3 className="profileName">Ricardo</h3>
               <p className="profileDescription">Fundador y Director General</p>
             </div>
+
           </div>
         </div>
 
-        {/* <div className="profileCard">
-          <div className="profile">
-            <img src="img/avatars/avatar3.png" alt="fotoPerfil" />
-            <div className="profileInfo">
-              <h3 className="profileName">Ricardo</h3>
-              <p className="profileDescription">Fundador y Director General</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="profileCard">
-          <div className="profile">
-            <img src="img/avatars/avatar2.png" alt="fotoPerfil" />
-            <div className="profileInfo">
-              <h3 className="profileName">Ricardo</h3>
-              <p className="profileDescription">Fundador y Director General</p>
-            </div>
-          </div>
-        </div> */}
+        
       </section>
-      
+
 
       <section id="contact">
         <h2 className="title">Contacto</h2>
