@@ -6,3 +6,21 @@
   height: 100vh;
   margin-top: 120px;
 }
+
+.sendButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border: none;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: #45a049;
+}
