@@ -103,10 +103,10 @@ function RegisterPage() {
 
 
                 </form>
-                
+
                 <p className="redirectLink">
                     Ya tienes una cuenta? {" "}
-                    <Link 
+                    <Link
                         to="/login"
                         className="link"
                     >Iniciar sesión</Link>
