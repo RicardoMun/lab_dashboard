@@ -1,4 +1,4 @@
-import "../Home/style.css"
+import "./style.css"
 
 import Navbar from '../../components/Navbar/Navbar'
 import AboutUsText from "../../components/Text/AboutUs"
