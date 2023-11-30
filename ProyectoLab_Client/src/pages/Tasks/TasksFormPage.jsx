@@ -1,4 +1,4 @@
-import "./style.css"
+import "./formStyle.css"
 import Navbar from "../../components/Navbar/Navbar"
 import { useForm } from "react-hook-form";
 import { useTask } from "../../context/TaskContext";
