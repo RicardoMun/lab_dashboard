@@ -35,7 +35,7 @@ function RegisterPage() {
     return (
 
         <div className="container">
-            <Navbar />
+           {/*  <Navbar /> */}
             <div className="form">
                 {
                     RegisterErrors.map((error, i) => {
