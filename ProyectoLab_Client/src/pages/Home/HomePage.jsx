@@ -7,7 +7,7 @@ function HomePage() {
   return (
     // a home page with info about the app
     <div className="container">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <section className="titleSection">
         <div className="titleSection">
