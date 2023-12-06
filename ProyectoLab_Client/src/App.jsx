@@ -7,10 +7,11 @@ import HomePage from './pages/Home/HomePage';
 import TasksPage from './pages/Tasks/TasksPage';
 import TasksFormPage from './pages/Tasks/TasksFormPage';
 import ProfilePage from './pages/Profile/ProfilePage';
+import Navbar from './components/Navbar/Navbar'
 
 import { AuthProvider } from './context/AuthContext';
 import { TaskProvider } from './context/TaskContext';
-import ProtectedRoute from './ProtectedRoute'
+import { ProtectedRoute } from './ProtectedRoute'
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
+          <Navbar />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
