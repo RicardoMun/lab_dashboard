@@ -24,7 +24,7 @@ function LoginPage() {
     return (
         
         <div className="container">
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="form">
                 {
                     /* Si se cambia por error.message se soluciona error que aparece 
@@ -72,13 +72,13 @@ function LoginPage() {
 
                 </form>
 
-                <p className="redirectLink">
+                {/* <p className="redirectLink">
                     No tienes una cuenta aún? {" "}
                     <Link 
                         to="/register"
                         className="link"
                     >Registrarse</Link>
-                </p>
+                </p> */}
             </div>
 
         </div>
