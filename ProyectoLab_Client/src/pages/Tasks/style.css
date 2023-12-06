@@ -7,20 +7,105 @@
   margin-top: 120px;
 }
 
+
+.error{
+  color: rgb(235, 58, 58);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.alertMessage{
+  background-color: rgb(235, 58, 58);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 .sendButton {
   width: 100%;
+  margin-top: 20px;
   padding: 10px;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  border: none;
-  font-size: 20px;
-  border-radius: 4px;
+  border-radius: 8px;
   background-color: #4CAF50;
   color: white;
+  font-size: 16px;
+  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .sendButton:hover {
-  background-color: #45a049;
+  background-color: #27ae60;
+}
+
+
+.AddLink{
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #4CAF50;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+.AddLink:hover{
+  background-color: #27ae60;
+}
+
+/* Estilo para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Estilo para las celdas del encabezado */
+th {
+  background-color: #f2f2f2;
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Estilo para las celdas del cuerpo */
+td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+/* Estilo para las filas impares */
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+
+
+/* Estilo para los botones */
+.sendButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 7px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/* Estilo para los enlaces dentro de los botones */
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+/* Cambiar color de enlace cuando está en hover */
+.link:hover {
+  color: #f2f2f2;
 }

@@ -18,6 +18,7 @@ div .container{
     height: 100%;
 }
 
+
 .imgSection{
     display: flex;
     flex-direction: row;
@@ -88,9 +89,10 @@ div .container{
     margin-bottom: 10px;
 }
 
-section{
-    margin-top: 20px;
-    margin-bottom: 40px; 
+section {
+  position: relative;
+  padding: 40px;
+  color: rgb(0, 0, 0);
 }
 
 header {
