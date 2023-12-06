@@ -15,6 +15,7 @@ function Navbar() {
 
     const closeMenu = () => setClick(false)
 
+
     return (
         <div className='header'>
             <nav className='navbar'>
@@ -27,46 +28,66 @@ function Navbar() {
 
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className='nav-item'>
-                        <Link to='/' onClick={closeMenu}>Contactos</Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='#about' onClick={closeMenu}>Sobre de nosotros</Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to='/tasks' onClick={closeMenu}>Tareas</Link>
-                    </li>
-                    <li className='nav-item'>
-                        <Link to="/login">Iniciar Sesión</Link>
-                    </li>
-                </ul>
-                
-                <h1 className="text-2xl font-bold">
-                    <Link to={isAuthenticated ? "/tasks" : "/"}>Task Manager</Link>
-                </h1>
-                <ul className="flex gap-x-2">
+
                     {isAuthenticated ? (
                         <>
-                            <li>
+                            <li className='nav-item'>
+                                <Link to='/tasks' onClick={closeMenu}>Tareas</Link>
+                            </li>
+
+                            <li className='nav-item'>
+                                <Link to='/' onClick={closeMenu}>Usuarios</Link>
+                            </li>
+
+                            <li className='nav-item'>
+                                <Link to='/' onClick={closeMenu}>Contenido</Link>
+                            </li>
+
+                            <li className='nav-item'>
+                                <Link to='/' onClick={closeMenu}>Algo más</Link>
+                            </li>
+
+                            <li className='nav-item'>
                                 ¡Bienvenido! <b>{user.username}</b>
                             </li>
+
                             <li>
                                 <button className="logoutButton">
                                     <Link to="/" onClick={() => logout()}>
                                         Cerrar Sesión
                                     </Link>
                                 </button>
-
                             </li>
+
+
                         </>
                     ) : (
                         <>
                             <li className='nav-item'>
-                                <Link to="/login">Iniciar Sesión</Link>
+                                <Link to='/' onClick={closeMenu}>Contactos</Link>
+                            </li>
+                            <li className='nav-item'>
+                                <Link to='#aboutUsSection'>Sobre de nosotros</Link>
+                            </li>
+
+                            <li className='nav-item'>
+                                <Link to='#aboutUsSection'>Encuentranos</Link>
+                            </li>
+
+                            <li className='nav-item'>
+                                <Link to='#aboutUsSection'>Reserva</Link>
+                            </li>
+
+                            <li className='nav-item'>
+                                <Link to="/login" className="linkP">Iniciar Sesión</Link>
                             </li>
                         </>
                     )}
                 </ul>
+
+
+
+
             </nav>
         </div>
     )

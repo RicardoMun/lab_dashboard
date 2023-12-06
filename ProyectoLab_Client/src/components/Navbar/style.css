@@ -4,10 +4,11 @@
     width: 100%;
     top: 0;
     left: 0;
-    transition: .3s ease-in;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+
 }
 
 .header .navbar {
@@ -45,7 +46,12 @@
     display: none;
 }
 
-.logoutButton{
+li .linkP {
+    color: #474747;
+    text-decoration: none;
+}
+
+.logoutButton {
     background-color: #f44336;
     color: white;
     padding: 10px 20px;
@@ -54,6 +60,9 @@
     cursor: pointer;
     font-weight: 500;
 }
+
+
+
 
 @media screen and (max-width:940px) {
     .header {
