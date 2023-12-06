@@ -10,7 +10,7 @@ import {
 
 const TaskContext = createContext();
 
-export const useTask = () => {
+export const useTasks = () => {
     const context = useContext(TaskContext)
 
     if (!context) {
@@ -49,6 +49,7 @@ export function TaskProvider({ children }) {
     const updateTask = async (id, task) => {
         try {
             await updateTaskRequest(id, task);
+            alert("Tarea actualizada exitosamente");
         } catch (error) {
             console.error(error);
         }
@@ -57,6 +58,7 @@ export function TaskProvider({ children }) {
     const deleteTask = async (id) => {
         try {
             const res = await deleteTaskRequest(id);
+            alert("Tarea eliminada exitosamente");
             if (res.status === 204) setTasks(tasks.filter((task) => task._id !== id));
         } catch (error) {
             console.log(error);
@@ -64,7 +66,14 @@ export function TaskProvider({ children }) {
     };
 
     return (
-        <TaskContext.Provider value={{ tasks, createTask }}>
+        <TaskContext.Provider value={{
+            tasks,
+            getTasks,
+            deleteTask,
+            createTask,
+            getTask,
+            updateTask,
+        }}>
             {children}
         </TaskContext.Provider>
     );
